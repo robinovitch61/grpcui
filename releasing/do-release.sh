@@ -49,12 +49,12 @@ $PREFIX docker run --privileged --rm tonistiigi/binfmt:qemu-v6.1.0 --install all
 export DOCKER_CLI_EXPERIMENTAL=enabled
 $PREFIX docker buildx create --use --name multiarch-builder --node multiarch-builder0
 # push to docker hub, both the given version as a tag and for "latest" tag
-$PREFIX docker buildx build --platform linux/amd64,linux/arm64 --tag fullstorydev/grpcui:${VERSION} --tag fullstorydev/grpcui:latest --push --progress plain --no-cache .
+$PREFIX docker buildx build --platform linux/amd64,linux/arm64 --tag robinovitch61/grpcui:${VERSION} --tag robinovitch61/grpcui:latest --push --progress plain --no-cache .
 rm VERSION
 
 # Homebrew release
 
-URL="https://github.com/fullstorydev/grpcui/archive/refs/tags/${VERSION}.tar.gz"
+URL="https://github.com/robinovitch61/grpcui/archive/refs/tags/${VERSION}.tar.gz"
 curl -L -o tmp.tgz "$URL"
 SHA="$(sha256sum < tmp.tgz | awk '{ print $1 }')"
 rm tmp.tgz

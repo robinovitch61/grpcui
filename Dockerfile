@@ -4,12 +4,12 @@ MAINTAINER Fullstory Engineering
 # create non-privileged group and user
 RUN addgroup -S grpcui && adduser -S grpcui -G grpcui
 
-WORKDIR /tmp/fullstorydev/grpcui
+WORKDIR /tmp/robinovitch61/grpcui
 # copy just the files/sources we need to build grpcui
-COPY VERSION *.go go.* /tmp/fullstorydev/grpcui/
-COPY cmd /tmp/fullstorydev/grpcui/cmd
-COPY internal /tmp/fullstorydev/grpcui/internal
-COPY standalone /tmp/fullstorydev/grpcui/standalone
+COPY VERSION *.go go.* /tmp/robinovitch61/grpcui/
+COPY cmd /tmp/robinovitch61/grpcui/cmd
+COPY internal /tmp/robinovitch61/grpcui/internal
+COPY standalone /tmp/robinovitch61/grpcui/standalone
 # and build a completely static binary (so we can use
 # scratch as basis for the final image)
 ENV CGO_ENABLED=0

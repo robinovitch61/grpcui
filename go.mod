@@ -1,4 +1,4 @@
-module github.com/fullstorydev/grpcui
+module github.com/robinovitch61/grpcui
 
 go 1.19
 

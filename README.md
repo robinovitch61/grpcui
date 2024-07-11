@@ -1,6 +1,6 @@
 # gRPC UI
-[![Build Status](https://circleci.com/gh/fullstorydev/grpcui/tree/master.svg?style=svg)](https://circleci.com/gh/fullstorydev/grpcui/tree/master)
-[![Go Report Card](https://goreportcard.com/badge/github.com/fullstorydev/grpcui)](https://goreportcard.com/report/github.com/fullstorydev/grpcui)
+[![Build Status](https://circleci.com/gh/robinovitch61/grpcui/tree/master.svg?style=svg)](https://circleci.com/gh/robinovitch61/grpcui/tree/master)
+[![Go Report Card](https://goreportcard.com/badge/github.com/robinovitch61/grpcui)](https://goreportcard.com/report/github.com/robinovitch61/grpcui)
 
 `grpcui` is a command-line tool that lets you interact with gRPC servers via a browser.
 It's sort of like [Postman](https://www.getpostman.com/), but for gRPC APIs instead of
@@ -21,10 +21,10 @@ reflection, you will either need the proto source files that define the service 
 protoset files that `grpcui` can use.
 
 This repo also provides two library packages
-1. `github.com/fullstorydev/grpcui`: This package contains the building blocks for embedding a
+1. `github.com/robinovitch61/grpcui`: This package contains the building blocks for embedding a
    gRPC web form into any Go HTTP server. It has functions for accessing the HTML form, the
    JavaScript code that powers it, as well as a sample CSS file, for styling the form.
-2. `github.com/fullstorydev/grpcui/standalone`: This package goes a step further and supplies
+2. `github.com/robinovitch61/grpcui/standalone`: This package goes a step further and supplies
    a single, simple HTTP handler that provides the entire gRPC web UI. You can just wire this
    handler into your HTTP server to embed a gRPC web page that looks exactly like the one you
    see when you use the `grpcui` command-line program. This single handler uses the above
@@ -68,7 +68,7 @@ brew install grpcui
 ### From Source
 You can use the `go` tool to install `grpcui`:
 ```shell
-go install github.com/fullstorydev/grpcui/cmd/grpcui@latest
+go install github.com/robinovitch61/grpcui/cmd/grpcui@latest
 ```
 
 This installs the command into the `bin` sub-folder of wherever your `$GOPATH`
